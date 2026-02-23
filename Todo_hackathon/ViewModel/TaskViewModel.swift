@@ -60,7 +60,6 @@ final class TaskViewModel: ObservableObject {
     
     private func observeMidnightReset() {
         NotificationCenter.default.addObserver(forName: .NSCalendarDayChanged, object: nil, queue: .main) { [weak self] _ in
-            TaskStorage.shared.clearPrevTasks()
             self?.getTasks()
         }
     }
