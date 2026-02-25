@@ -34,7 +34,7 @@ final class TaskViewModel: ObservableObject {
     func addTask(task: Task) -> Bool{
         
         let taskId = UUID()
-        let newTask = Task(id: taskId, name: task.name, description: task.description, isCompleted: task.isCompleted, createdAt: task.createdAt)
+        let newTask = Task(id: taskId, name: task.name, description: task.description, isCompleted: task.isCompleted, createdAt: Date())
         
         if (TaskStorage.shared.addTask(newTask)){
             return true
