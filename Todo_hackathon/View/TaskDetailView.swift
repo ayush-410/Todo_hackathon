@@ -61,6 +61,7 @@ struct TaskDetailView: View {
                     } label: {
                         Text("Update")
                     }
+                    .disabled(selectedTask.name.isEmpty)
                 }
             }
         }
